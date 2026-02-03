@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofire 💖 | Will You Be My Valentine?</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: 'Trebuchet MS', 'Arial', sans-serif;
+      text-align: center;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      margin: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 420px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .photo {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain; /* Ensures the full bouquet is visible without cropping */
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    button {
+      padding: 14px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background: #ff2e63;
+      color: white;
+    }
+
+    #yesBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(255,46,99,0.5);
+    }
+
+    #noBtn {
+      background: white;
+      color: #ff2e63;
+      position: relative;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .heart {
+      color: #ff2e63;
+      animation: beat 1.5s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Romantic background music (free Pixabay gentle piano loop) -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/10/09/audio_8d8b0e3e1e.mp3?filename=romantic-piano-1-30sec-144996.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="card">
+    <h1>Hey Sofire 🥹<span class="heart">💖</span></h1>
+    <p>I’ve been holding this in my heart for so long…</p>
+
+    <!-- Sofire's photo with the red roses bouquet - now using the correct direct link -->
+    <img src="https://i.ibb.co/PGhvppgY/IMG-4968.jpg" alt="Sofire glowing beautifully while holding a stunning large bouquet of deep red roses" class="photo">
+
+    <!-- Cute love GIF (hearts and affection) -->
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Adorable animated hearts floating with love vibes" class="photo">
+
+    <p>Will you be my Valentine? 🌹💘</p>
+
+    <div class="buttons">
+      <button id="yesBtn" onclick="yesClick()">YES 💞</button>
+      <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
+    </div>
+
+    <footer>
+      Forever yours,<br>
+      Daddybear 💋<span class="heart">❤️</span>
+    </footer>
+  </div>
+
+  <script>
+    function moveNo() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.random() * 300 - 150;
+      const y = Math.random() * 300 - 150;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+      btn.style.transition = "transform 0.4s ease";
+    }
+
+    function yesClick() {
+      alert("YAY 💖 I knew it!! I can’t wait to make this Valentine’s Day unforgettable with you 😘🌹");
+    }
+  </script>
+
+</body>
+</html>
